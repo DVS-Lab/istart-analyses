@@ -1,0 +1,37 @@
+
+/bin/cp /tmp/feat_qGd2D3.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -I 1 -init
+34615
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 243 -l logs -N feat2_pre -j 34615  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -I 1 -prestats
+35628
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 50 -l logs -N feat3_film -j 35628  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -I 1 -stats
+28400
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 119 -l logs -N feat4_post -j 28400  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -poststats 0 
+  File "/usr/share/fsl/5.0/bin/imglob", line 78
+    print "Usage: $0 [-extension/extensions] <list of names>"
+                                                            ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("Usage: $0 [-extension/extensions] <list of names>")?
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/share/fsl/5.0/bin/feat" line 309)
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/usr/share/fsl/5.0/bin/fsl_sub -T 119 -l logs -N feat4_post -j 28400  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -poststats 0 
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE
