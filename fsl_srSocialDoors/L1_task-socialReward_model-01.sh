@@ -1,10 +1,12 @@
+#!/bin/bash
+
 maindir=/data/projects/istart-analyses
 
 TASK=srSocial
 
 sub=$1
-run=$2
-ppi=$3 # 0 for activation, otherwise name of the roi
+run=1
+ppi=0 # 0 for activation, otherwise name of the roi
 sm=4 #I set this to 4
 
 MAINOUTPUT=${maindir}/fsl_srSocialDoors/sub-${sub}
@@ -12,21 +14,15 @@ mkdir -p $MAINOUTPUT
 
 # denoise data, if it doesn't exist -- ugh, changed outputs for latest fmriprep (v1.5.0) (this is limited to sub-149 for testing now)
 cd ${maindir}/fmriprep/sub-${sub}/func
-if [ $sub -eq 149 ]; then
-	if [ ! -e sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_variant-unsmoothedAROMAnonaggr_preproc.nii.gz ]; then
-		fsl_regfilt -i sub-${sub}_task-${TASK}_run-0${run}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz \
-		    -f $(cat sub-${sub}_task-${TASK}_run-0${run}_AROMAnoiseICs.csv) \
-		    -d sub-${sub}_task-${TASK}_run-0${run}_desc-MELODIC_mixing.tsv \
-		    -o sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_variant-unsmoothedAROMAnonaggr_preproc.nii.gz
-	fi
-else
-	if [ ! -e sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_variant-unsmoothedAROMAnonaggr_preproc.nii.gz ]; then
-		fsl_regfilt -i sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_preproc.nii.gz \
-		    -f $(cat sub-${sub}_task-${TASK}_run-0${run}_AROMAnoiseICs.csv) \
-		    -d sub-${sub}_task-${TASK}_run-0${run}_bold_MELODICmix.tsv \
-		    -o sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_variant-unsmoothedAROMAnonaggr_preproc.nii.gz
-	fi
+
+if [ ! -e sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_variant-unsmoothedAROMAnonaggr_preproc.nii.gz ]; then
+	fsl_regfilt \ 
+    -i sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_preproc.nii.gz \ 
+    -f $(cat sub-${sub}_task-${TASK}_run-0${run}_AROMAnoiseICs.csv) \ 
+    -d sub-${sub}_task-${TASK}_run-0${run}_bold_MELODICmix.tsv \ 
+    -o sub-${sub}_task-${TASK}_run-0${run}_bold_space-MNI152NLin2009cAsym_variant-unsmoothedAROMAnonaggr_preproc.nii.gz
 fi
+
 
 
 

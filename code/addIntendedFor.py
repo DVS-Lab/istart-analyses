@@ -1,10 +1,10 @@
 
-#imports libraries
 import json
 import os
 import subprocess
 
-bidsdir = os.path.join('data/projects/istart-analyses'/bids'%(cwd))
+bidsdir = '/data/projects/istart-analyses/bids'
+
 
 files = os.listdir(bidsdir)
 subs=[x for x in files if x.startswith('sub')]

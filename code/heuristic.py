@@ -41,7 +41,7 @@ def infotodict(seqinfo):
             }
     
     list_of_ids = [s.series_id for s in seqinfo]
-    
+       
     for s in seqinfo:
         if ('T1w' in s.protocol_name) and ('NORM' in s.image_type):
             info[t1w] = [s.series_id]
@@ -52,27 +52,27 @@ def infotodict(seqinfo):
         
         if (s.dim4 == 265) and ('MID' in s.protocol_name) and ('MB' in s.image_type):
             info[MID].append(s.series_id)
-            idx = [list_of_ids.index(s.series_id)
+            idx = list_of_ids.index(s.series_id)
             info[MID_sbref].append(list_of_ids[idx -1])
             
         if (s.dim4 >= 230 and s.dim4 <= 235) and ('shared' in s.protocol_name) and ('MB' in s.image_type):
             info[sharedreward].append(s.series_id)
-            idx = [list_of_ids.index(s.series_id)
+            idx = list_of_ids.index(s.series_id)
             info[sharedreward_sbref].append(list_of_ids[idx -1])        
         
         if (s.dim4 == 293) and ('social' in s.protocol_name) and ('MB' in s.image_type):
             info[srSocial] = [s.series_id]
-            idx = [list_of_ids.index(s.series_id)
+            idx = list_of_ids.index(s.series_id)
             info[srSocial_sbref].append(list_of_ids[idx -1])
         
         if (s.dim4 == 293) and ('doors' in s.protocol_name) and ('MB' in s.image_type):
             info[srDoors] = [s.series_id]
-            idx = [list_of_ids.index(s.series_id)
+            idx = list_of_ids.index(s.series_id)
             info[srDoors_sbref].append(list_of_ids[idx -1])
         
         if (s.dim4 == 225) and ('UGDG' in s.protocol_name) and ('MB' in s.image_type):
             info[UGDG].append(s.series_id)
-            idx = [list_of_ids.index(s.series_id)
+            idx = list_of_ids.index(s.series_id)
             info[UGDG_sbref].append(list_of_ids[idx -1])
             
     return info
