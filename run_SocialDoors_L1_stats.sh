@@ -8,8 +8,8 @@
 
 for sm in 6; do
 	for ppi in 0; do #VS Amyg FFA; putting 0 first will indicate "activation"
-		for subrun in "1001 1" "1002 1" "1003 1" "1004 1"; do
-
+		#for subrun in "1001 1" "1002 1" "1003 1" "1004 1"; do
+        for subrun in "1001 1"; do
 
 		  set -- $subrun
 		  sub=$1

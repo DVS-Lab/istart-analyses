@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-maindir=`pwd`
+maindir="/data/projects/istart-analyses"
 
 TASK=srSocial
 
@@ -16,11 +16,24 @@ dtype=dctAROMAnonaggr
 
 
 # set input and output and adjust for ppi
+
 MAINOUTPUT=${maindir}/derivatives/fsl_srSocialDoors/sub-${sub}
-mkdir -p $MAINOUTPUT
+
 DATA=${maindir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_run-0${run}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz 
-CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}_task-${TASK}_run-0${run}_desc-confounds_run-0${run}_desc-confounds_desc-fslConfounds.tsv
+CONFOUNDEVS=${maindir}/derivatives/confounds/sub-${sub}_task-${TASK}_run-0${run}_desc-confounds_run-0${run}_desc-confounds_desc-fslConfounds.tsv
 EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/socialReward_faceA/run-0${run}
+
+
+echo $MAINOUTPUT
+
+echo $DATA
+
+echo $CONFOUNDEVS
+
+echo $EVDIR
+
+
+
 if [ "$ppi" == "0" ]; then
 	TYPE=act
 	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-01_type-${TYPE}_run-0${run}_sm-${sm}_variant-${dtype}
@@ -37,7 +50,7 @@ else
 	rm -rf ${OUTPUT}.feat
 fi
 
-ITEMPLATE=${maindir}/derivatives/fsl_srSocialDoors/templates/L1_task-${TASK}_model-01_type-${TYPE}.fsf
+ITEMPLATE=${maindir}/derivatives/fsl_srSocialDoors/templates/L1_task-srSocial_model-01_type-act.fsf
 OTEMPLATE=${MAINOUTPUT}/L1_task-${TASK}_model-01_seed-${ppi}_run-0${run}_variant-${dtype}.fsf
 if [ "$ppi" == "0" ]; then
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
