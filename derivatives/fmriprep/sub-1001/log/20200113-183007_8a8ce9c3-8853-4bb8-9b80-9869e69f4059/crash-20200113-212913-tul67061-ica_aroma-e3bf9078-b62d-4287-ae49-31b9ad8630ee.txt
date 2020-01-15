@@ -1,0 +1,44 @@
+Node: fmriprep_wf.single_subject_1001_wf.func_preproc_task_srSocial_run_01_wf.ica_aroma_wf.ica_aroma
+Working directory: /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srSocial_run_01_wf/ica_aroma_wf/ica_aroma
+
+Node inputs:
+
+TR = 1.75
+args = -np
+compress_report = auto
+denoise_type = nonaggr
+dim = <undefined>
+environ = {}
+feat_dir = <undefined>
+fnirt_warp_file = <undefined>
+in_file = <undefined>
+mask = <undefined>
+mat_file = <undefined>
+melodic_dir = <undefined>
+motion_parameters = <undefined>
+out_dir = out
+out_report = ica_aroma_reportlet.svg
+report_mask = <undefined>
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 69, in run_node
+    result['result'] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 479, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 585, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 678, in _run_command
+    result = self._interface.run(cwd=outdir)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 383, in run
+    runtime = self._post_run_hook(runtime)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/niworkflows/interfaces/segmentation.py", line 191, in _post_run_hook
+    outputs = self.aggregate_outputs(runtime=runtime)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 461, in aggregate_outputs
+    predicted_outputs = self._list_outputs()  # Predictions from _list_outputs
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/mixins/reporting.py", line 53, in _list_outputs
+    outputs = super(ReportCapableInterface, self)._list_outputs()
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/fsl/aroma.py", line 137, in _list_outputs
+    outputs['out_dir'] = os.path.abspath(self.inputs.out_dir)
+  File "/usr/local/miniconda/lib/python3.7/posixpath.py", line 376, in abspath
+    cwd = os.getcwd()
+FileNotFoundError: [Errno 2] No such file or directory

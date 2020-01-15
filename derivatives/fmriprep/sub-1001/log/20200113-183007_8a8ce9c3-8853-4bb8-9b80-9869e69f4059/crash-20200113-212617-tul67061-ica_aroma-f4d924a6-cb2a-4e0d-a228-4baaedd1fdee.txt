@@ -1,0 +1,56 @@
+Node: fmriprep_wf.single_subject_1001_wf.func_preproc_task_srDoors_run_01_wf.ica_aroma_wf.ica_aroma
+Working directory: /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma
+
+Node inputs:
+
+TR = 1.75
+args = -np
+compress_report = auto
+denoise_type = nonaggr
+dim = <undefined>
+environ = {}
+feat_dir = <undefined>
+fnirt_warp_file = <undefined>
+in_file = <undefined>
+mask = <undefined>
+mat_file = <undefined>
+melodic_dir = <undefined>
+motion_parameters = <undefined>
+out_dir = out
+out_report = ica_aroma_reportlet.svg
+report_mask = <undefined>
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 69, in run_node
+    result['result'] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 479, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 585, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 678, in _run_command
+    result = self._interface.run(cwd=outdir)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 382, in run
+    runtime = self._run_interface(runtime)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 767, in _run_interface
+    self.raise_exception(runtime)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 704, in raise_exception
+    ).format(**runtime.dictcopy()))
+RuntimeError: Command:
+ICA_AROMA.py -tr 1.750 -np -den nonaggr -i /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/smooth/vol0000_xform-00000_merged_smooth.nii.gz -m /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/bold_std_trans_wf/_key_MNI152NLin6Asym/mask_std_tfm/ref_bold_corrected_brain_mask_maths_trans.nii.gz -meldir /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/melodic -mc /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/bold_hmc_wf/normalize_motion/motion_params.txt -o /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma/out
+Standard output:
+
+------------------------------- RUNNING ICA-AROMA ------------------------------- 
+--------------- 'ICA-based Automatic Removal Of Motion Artifacts' --------------- 
+
+Step 1) MELODIC
+  - The existing/specified MELODIC directory will be used.
+Standard error:
+Error: failed to open file /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma/out/thr_zstat0044.nii.gz
+Image Exception : #22 :: ERROR: Could not open image /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma/out/thr_zstat0044
+Traceback (most recent call last):
+  File "/opt/ICA-AROMA/ICA_AROMA.py", line 204, in <module>
+    aromafunc.runICA(fslDir, inFile, outDir, melDir, mask, dim, TR)
+  File "/opt/ICA-AROMA/ICA_AROMA_functions.py", line 103, in runICA
+    lenIC = int(float(subprocess.getoutput(cmd)))
+ValueError: could not convert string to float: 'ERROR: Could not open file'
+Return code: 1

@@ -1,0 +1,41 @@
+Node: fmriprep_wf.single_subject_1001_wf.func_preproc_task_srDoors_run_01_wf.ica_aroma_wf.ica_aroma
+Working directory: /scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma
+
+Node inputs:
+
+TR = 1.75
+args = -np
+compress_report = auto
+denoise_type = nonaggr
+dim = <undefined>
+environ = {}
+feat_dir = <undefined>
+fnirt_warp_file = <undefined>
+in_file = <undefined>
+mask = <undefined>
+mat_file = <undefined>
+melodic_dir = <undefined>
+motion_parameters = <undefined>
+out_dir = out
+out_report = ica_aroma_reportlet.svg
+report_mask = <undefined>
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 557, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma/_0x797f318cc4774333ae23cb6f2f23720c_unfinished.json' -> '/scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma/_0x797f318cc4774333ae23cb6f2f23720c.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 69, in run_node
+    result['result'] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 492, in run
+    hashfile_unfinished.replace('_unfinished', ''))
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 571, in move
+    copy_function(src, real_dst)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/fmriprep_wf/single_subject_1001_wf/func_preproc_task_srDoors_run_01_wf/ica_aroma_wf/ica_aroma/_0x797f318cc4774333ae23cb6f2f23720c_unfinished.json'

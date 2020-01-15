@@ -1,0 +1,85 @@
+Node: fmriprep_wf.single_subject_1004_wf.func_preproc_task_UGDG_run_02_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr
+Working directory: /scratch/fmriprep_wf/single_subject_1004_wf/func_preproc_task_UGDG_run_02_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr
+
+Node inputs:
+
+angle_rep = <undefined>
+apply_isoxfm = <undefined>
+apply_xfm = <undefined>
+args = <undefined>
+bbrslope = <undefined>
+bbrtype = <undefined>
+bgvalue = <undefined>
+bins = <undefined>
+coarse_search = <undefined>
+compress_report = auto
+cost = <undefined>
+cost_func = bbr
+datatype = <undefined>
+display_init = <undefined>
+dof = 6
+echospacing = <undefined>
+environ = {'FSLOUTPUTTYPE': 'NIFTI_GZ'}
+fieldmap = <undefined>
+fieldmapmask = <undefined>
+fine_search = <undefined>
+force_scaling = <undefined>
+in_file = <undefined>
+in_matrix_file = <undefined>
+in_weight = <undefined>
+interp = <undefined>
+min_sampling = <undefined>
+no_clamp = <undefined>
+no_resample = <undefined>
+no_resample_blur = <undefined>
+no_search = <undefined>
+out_file = <undefined>
+out_log = <undefined>
+out_matrix_file = <undefined>
+out_report = report.svg
+output_type = NIFTI_GZ
+padding_size = <undefined>
+pedir = <undefined>
+ref_weight = <undefined>
+reference = <undefined>
+rigid2D = <undefined>
+save_log = <undefined>
+schedule = /usr/share/fsl/5.0/etc/flirtsch/bbr.sch
+searchr_x = <undefined>
+searchr_y = <undefined>
+searchr_z = <undefined>
+sinc_width = <undefined>
+sinc_window = <undefined>
+uses_qform = <undefined>
+verbose = <undefined>
+wm_seg = <undefined>
+wmcoords = <undefined>
+wmnorms = <undefined>
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 69, in run_node
+    result['result'] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 479, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 585, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 678, in _run_command
+    result = self._interface.run(cwd=outdir)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 382, in run
+    runtime = self._run_interface(runtime)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 767, in _run_interface
+    self.raise_exception(runtime)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/interfaces/base/core.py", line 704, in raise_exception
+    ).format(**runtime.dictcopy()))
+RuntimeError: Command:
+flirt -in /scratch/fmriprep_wf/single_subject_1004_wf/func_preproc_task_UGDG_run_02_wf/sdc_estimate_wf/sdc_unwarp_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz -ref /scratch/fmriprep_wf/single_subject_1004_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-1004_T1w_corrected_masked_xform.nii.gz -out uni_xform_masked_flirt.nii.gz -omat uni_xform_masked_flirt.mat -searchcost bbr -dof 6 -init /scratch/fmriprep_wf/single_subject_1004_wf/func_preproc_task_UGDG_run_02_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr_init/uni_xform_masked_flirt.mat -schedule /usr/share/fsl/5.0/etc/flirtsch/bbr.sch -wmseg /scratch/fmriprep_wf/single_subject_1004_wf/anat_preproc_wf/t1w_dseg/sub-1004_T1w_corrected_masked_xform_seg_wm.nii.gz
+Standard output:
+
+Standard error:
+** ERROR (nifti_image_read): short header read '/scratch/fmriprep_wf/single_subject_1004_wf/anat_preproc_wf/t1w_dseg/sub-1004_T1w_corrected_masked_xform_seg_wm.nii.gz'
+** ERROR: nifti_image_open(/scratch/fmriprep_wf/single_subject_1004_wf/anat_preproc_wf/t1w_dseg/sub-1004_T1w_corrected_masked_xform_seg_wm): bad header info
+ERROR: failed to open file /scratch/fmriprep_wf/single_subject_1004_wf/anat_preproc_wf/t1w_dseg/sub-1004_T1w_corrected_masked_xform_seg_wm
+Image Exception : #22 :: ERROR: Could not open image /scratch/fmriprep_wf/single_subject_1004_wf/anat_preproc_wf/t1w_dseg/sub-1004_T1w_corrected_masked_xform_seg_wm
+terminate called after throwing an instance of 'RBD_COMMON::BaseException'
+Aborted (core dumped)
+Return code: 134
