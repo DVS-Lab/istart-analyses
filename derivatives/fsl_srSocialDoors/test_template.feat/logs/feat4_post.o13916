@@ -1,0 +1,5 @@
+Error encountered while running in main feat script, halting.
+  File "/usr/share/fsl/5.0/bin/imglob", line 78
+    print "Usage: $0 [-extension/extensions] <list of names>"
+                                                            ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("Usage: $0 [-extension/extensions] <list of names>")?

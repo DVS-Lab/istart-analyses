@@ -1,0 +1,14 @@
+/ContrastName1	pos 
+/ContrastName2	neg 
+/ContrastName3	decision 
+/ContrastName4	pos > neg 
+/NumWaves	3
+/NumContrasts	4
+/PPheights		2.301778e-01	2.286374e-01	5.935365e-01	2.407851e-01
+/RequiredEffect		0.920	0.909	0.817	0.945
+
+/Matrix
+1.000000e+00 0.000000e+00 0.000000e+00 
+0.000000e+00 1.000000e+00 0.000000e+00 
+0.000000e+00 0.000000e+00 1.000000e+00 
+1.000000e+00 -1.000000e+00 0.000000e+00 

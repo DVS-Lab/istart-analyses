@@ -1,0 +1,13 @@
+  File "/usr/share/fsl/5.0/bin/imglob", line 78
+    print "Usage: $0 [-extension/extensions] <list of names>"
+                                                            ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("Usage: $0 [-extension/extensions] <list of names>")?
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/share/fsl/5.0/bin/feat" line 309)

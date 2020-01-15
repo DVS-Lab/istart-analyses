@@ -1,0 +1,432 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Tue Dec 10 14:46:34 EST 2019<p>
+Feat main script<br><pre>
+
+/bin/cp /tmp/feat_qGd2D3.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -I 1 -init
+34615
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 243 -l logs -N feat2_pre -j 34615  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -I 1 -prestats
+35628
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 50 -l logs -N feat3_film -j 35628  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -I 1 -stats
+28400
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 119 -l logs -N feat4_post -j 28400  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -poststats 0 
+  File "/usr/share/fsl/5.0/bin/imglob", line 78
+    print "Usage: $0 [-extension/extensions] <list of names>"
+                                                            ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("Usage: $0 [-extension/extensions] <list of names>")?
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/share/fsl/5.0/bin/feat" line 309)
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/usr/share/fsl/5.0/bin/fsl_sub -T 119 -l logs -N feat4_post -j 28400  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_caleb/test_template.feat/design.fsf -D /data/projects/iStart-practice/fslTest_caleb/test_template.feat -poststats 0 
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE
+</pre><hr>Initialisation<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths /data/projects/iStart-practice/fslTest_caleb/fmriprep/fmriprep/sub-1999/func/sub-1999_task-srSocial_run-01_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold prefiltered_func_data -odt float
+Total original volumes = 270
+
+/usr/share/fsl/5.0/bin/fslroi prefiltered_func_data example_func 135 1
+</pre><hr>Preprocessing:Stage 1<br><pre>
+</pre><hr>Preprocessing:Stage 2<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -Tmean mean_func
+
+/usr/share/fsl/5.0/bin/bet2 mean_func mask -f 0.3 -n -m; /usr/share/fsl/5.0/bin/immv mask_mask mask
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet
+
+/usr/share/fsl/5.0/bin/fslstats prefiltered_func_data_bet -p 2 -p 98
+0.000000 11401.111328 
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_bet -thr 1140.1111328 -Tmin -bin mask -odt char
+
+/usr/share/fsl/5.0/bin/fslstats prefiltered_func_data -k mask -p 50
+8640.500977 
+
+/usr/share/fsl/5.0/bin/fslmaths mask -dilF mask
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_thresh -mul 1.1573403008250132 prefiltered_func_data_intnorm
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_intnorm -Tmean tempMean
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_intnorm -bptf 26.315789473684212 -1 -add tempMean prefiltered_func_data_tempfilt
+
+/usr/share/fsl/5.0/bin/imrm tempMean
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_tempfilt filtered_func_data
+
+/usr/share/fsl/5.0/bin/melodic -i filtered_func_data -o filtered_func_data.ica -v --nobet --bgthreshold=1 --tr=1.900000 -d 0 --mmthresh=0.5 --report --guireport=../../report.html 
+
+Melodic Version 3.14
+
+Melodic results will be in filtered_func_data.ica
+
+Create mask ... done
+Reading data file filtered_func_data  ...  done
+  Estimating data smoothness ...  done 
+  Removing mean image ... done
+  Normalising by voxel-wise variance ... done
+Excluding voxels with constant value ... done
+
+  Data size : 270 x 368367
+
+Starting PCA  ... done
+Start whitening using  29 dimensions ... 
+  retaining 45.7149 percent of the variability 
+ ... done
+
+Starting ICA estimation using symm
+
+  Step no. 1 change : 0.876053
+  Step no. 2 change : 0.201531
+  Step no. 3 change : 0.0803932
+  Step no. 4 change : 0.0353452
+  Step no. 5 change : 0.0280812
+  Step no. 6 change : 0.0163402
+  Step no. 7 change : 0.028265
+  Step no. 8 change : 0.03211
+  Step no. 9 change : 0.0231326
+  Step no. 10 change : 0.0126148
+  Step no. 11 change : 0.0118284
+  Step no. 12 change : 0.00759136
+  Step no. 13 change : 0.00502621
+  Step no. 14 change : 0.00394076
+  Step no. 15 change : 0.00387252
+  Step no. 16 change : 0.00372221
+  Step no. 17 change : 0.00325995
+  Step no. 18 change : 0.0025453
+  Step no. 19 change : 0.00179463
+  Step no. 20 change : 0.00117911
+  Step no. 21 change : 0.000785015
+  Step no. 22 change : 0.000575199
+  Step no. 23 change : 0.000472977
+  Step no. 24 change : 0.000434988
+  Step no. 25 change : 0.000402338
+  Step no. 26 change : 0.000372273
+  Step no. 27 change : 0.000342712
+  Step no. 28 change : 0.000312376
+  Step no. 29 change : 0.000280787
+  Step no. 30 change : 0.000257546
+  Step no. 31 change : 0.000236394
+  Step no. 32 change : 0.000212572
+  Step no. 33 change : 0.000187431
+  Step no. 34 change : 0.000162474
+  Step no. 35 change : 0.000164641
+  Step no. 36 change : 0.000182258
+  Step no. 37 change : 0.000201999
+  Step no. 38 change : 0.000223843
+  Step no. 39 change : 0.000247648
+  Step no. 40 change : 0.00027312
+  Step no. 41 change : 0.000299783
+  Step no. 42 change : 0.000326943
+  Step no. 43 change : 0.000353659
+  Step no. 44 change : 0.000378733
+  Step no. 45 change : 0.000400735
+  Step no. 46 change : 0.000418079
+  Step no. 47 change : 0.000429162
+  Step no. 48 change : 0.000432566
+  Step no. 49 change : 0.0004273
+  Step no. 50 change : 0.000413021
+  Step no. 51 change : 0.000390181
+  Step no. 52 change : 0.000360038
+  Step no. 53 change : 0.000324503
+  Step no. 54 change : 0.000285864
+  Step no. 55 change : 0.00024644
+  Step no. 56 change : 0.00020828
+  Step no. 57 change : 0.000172949
+  Step no. 58 change : 0.000141446
+  Step no. 59 change : 0.000114236
+  Step no. 60 change : 9.13492e-05
+  Step no. 61 change : 7.2516e-05
+  Step no. 62 change : 5.729e-05
+  Step no. 63 change : 4.51511e-05
+  Convergence after 63 steps 
+
+Sorting IC maps
+
+Writing results to : 
+  filtered_func_data.ica/melodic_IC
+  filtered_func_data.ica/melodic_Tmodes
+  filtered_func_data.ica/melodic_mix
+  filtered_func_data.ica/melodic_FTmix
+  filtered_func_data.ica/melodic_PPCA
+  filtered_func_data.ica/melodic_ICstats
+  filtered_func_data.ica/mask
+...done
+Creating report index page ...done
+
+
+Running Mixture Modelling on Z-transformed IC maps ...
+  IC map 1 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 2 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 3 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 4 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 5 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 6 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 7 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 8 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 9 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 10 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 11 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 12 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 13 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 14 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 15 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 16 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 17 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 18 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 19 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 20 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 21 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 22 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 23 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 24 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 25 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 26 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 27 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 28 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+  IC map 29 ... 
+   calculating mixture-model fit 
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   creating report page ...    done
+
+Writing results to : 
+  filtered_func_data.ica/melodic_IC
+  filtered_func_data.ica/melodic_Tmodes
+  filtered_func_data.ica/melodic_mix
+  filtered_func_data.ica/melodic_FTmix
+  filtered_func_data.ica/melodic_PPCA
+  filtered_func_data.ica/melodic_ICstats
+  filtered_func_data.ica/mask
+...done
+
+
+ To view the output report point your web browser at filtered_func_data.ica/report/00index.html
+
+finished!
+
+
+/usr/share/fsl/5.0/bin/fslmaths filtered_func_data -Tmean mean_func
+
+/bin/rm -rf prefiltered_func_data*
+</pre><hr>Stats<br><pre>
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/iStart-practice/fslTest_caleb/fsl/EVfiles/run-01_win.txt custom_timing_files/ev1.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/iStart-practice/fslTest_caleb/fsl/EVfiles/run-01_loss.txt custom_timing_files/ev2.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/iStart-practice/fslTest_caleb/fsl/EVfiles/run-01_decision.txt custom_timing_files/ev3.txt
+
+/usr/share/fsl/5.0/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
+Log directory is: stats
+paradigm.getDesignMatrix().Nrows()=270
+paradigm.getDesignMatrix().Ncols()=3
+sizeTS=270
+numTS=365341
+Calculating residuals...
+Completed
+Estimating residual autocorrelation...
+Calculating raw AutoCorrs... Completed
+mode = 1584.36
+sig = 7361
+Spatially smoothing auto corr estimates
+...............
+Completed
+Tukey M = 16
+Tukey estimates... Completed
+Completed
+Prewhitening and Computing PEs...
+Percentage done:
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,Completed
+Saving results... 
+Completed
+
+/usr/share/fsl/5.0/bin/smoothest -d 267   -m mask -r stats/res4d > stats/smoothness
+</pre><hr>Post-stats<br><pre>
+  File "/usr/share/fsl/5.0/bin/imglob", line 78
+    print "Usage: $0 [-extension/extensions] <list of names>"
+                                                            ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("Usage: $0 [-extension/extensions] <list of names>")?
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/share/fsl/5.0/bin/feat" line 309)
+Error encountered while running in main feat script, halting.
+  File "/usr/share/fsl/5.0/bin/imglob", line 78
+    print "Usage: $0 [-extension/extensions] <list of names>"
+                                                            ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("Usage: $0 [-extension/extensions] <list of names>")?
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>
