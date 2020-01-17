@@ -14,26 +14,12 @@ dtype=dctAROMAnonaggr
 # 2) add logging option if running through a second time
 # 4) execute with datalad run -m "message" --input "derivatives/fmriprep/*" --output "derivatives/fsl/*" "bash run_L1stats.sh"
 
-
 # set input and output and adjust for ppi
 
 MAINOUTPUT=${maindir}/derivatives/fsl_srSocialDoors/sub-${sub}
-
 DATA=${maindir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_run-0${run}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz 
-CONFOUNDEVS=${maindir}/derivatives/confounds/sub-${sub}_task-${TASK}_run-0${run}_desc-confounds_run-0${run}_desc-confounds_desc-fslConfounds.tsv
-EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/socialReward_faceA/run-0${run}
-
-
-echo $MAINOUTPUT
-
-echo $DATA
-
-echo $CONFOUNDEVS
-
-echo $EVDIR
-
-
-
+CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}_task-${TASK}_run-0${run}_desc-confounds_run-0${run}_desc-confounds_desc-fslConfounds.tsv
+EVDIR=${maindir}/derivatives/fsl_srSocialDoors/EVfiles/sub-${sub}/socialReward_faceA/run-0${run}
 if [ "$ppi" == "0" ]; then
 	TYPE=act
 	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-01_type-${TYPE}_run-0${run}_sm-${sm}_variant-${dtype}

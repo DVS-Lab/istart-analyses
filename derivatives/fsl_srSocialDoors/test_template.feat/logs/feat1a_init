@@ -1,6 +1,0 @@
-</pre><hr>Initialisation<br><pre>
-
-/usr/share/fsl/5.0/bin/fslmaths /data/projects/iStart-practice/fslTest_caleb/fmriprep/fmriprep/sub-1999/func/sub-1999_task-srSocial_run-01_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold prefiltered_func_data -odt float
-Total original volumes = 270
-
-/usr/share/fsl/5.0/bin/fslroi prefiltered_func_data example_func 135 1
