@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 maindir="/data/projects/istart-analyses"
-
 TASK=srSocial
+cd $maindir
 
 sub=$1
 run=$2
@@ -18,7 +18,7 @@ dtype=dctAROMAnonaggr
 
 MAINOUTPUT=${maindir}/derivatives/fsl_srSocialDoors/sub-${sub}
 DATA=${maindir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_run-0${run}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz 
-CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}_task-${TASK}_run-0${run}_desc-confounds_run-0${run}_desc-confounds_desc-fslConfounds.tsv
+CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_run-0${run}_desc-fslConfounds.tsv
 EVDIR=${maindir}/derivatives/fsl_srSocialDoors/EVfiles/sub-${sub}/socialReward_faceA/run-0${run}
 if [ "$ppi" == "0" ]; then
 	TYPE=act
@@ -36,8 +36,9 @@ else
 	rm -rf ${OUTPUT}.feat
 fi
 
-ITEMPLATE=${maindir}/derivatives/fsl_srSocialDoors/templates/L1_task-srSocial_model-01_type-act.fsf
+ITEMPLATE=${maindir}/derivatives/fsl_srSocialDoors/design.fsf
 OTEMPLATE=${MAINOUTPUT}/L1_task-${TASK}_model-01_seed-${ppi}_run-0${run}_variant-${dtype}.fsf
+
 if [ "$ppi" == "0" ]; then
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@DATA@'$DATA'@g' \

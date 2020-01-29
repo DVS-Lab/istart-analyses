@@ -1,0 +1,23 @@
+</pre><hr>Stats<br><pre>
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntLgGain.txt custom_timing_files/ev1.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntLgLoss.txt custom_timing_files/ev2.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntSmGain.txt custom_timing_files/ev3.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntSmLoss.txt custom_timing_files/ev4.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntNeu.txt custom_timing_files/ev5.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_ConHit.txt custom_timing_files/ev6.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_ConMiss.txt custom_timing_files/ev7.txt
+
+/usr/share/fsl/5.0/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
+Log directory is: stats
+paradigm.getDesignMatrix().Nrows()=265
+paradigm.getDesignMatrix().Ncols()=7
+sizeTS=265
+numTS=79133
+Calculating residuals...

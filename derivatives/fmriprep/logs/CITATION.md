@@ -24,7 +24,7 @@ The following templates were selected for spatial normalization:
 
 Functional data preprocessing
 
-: For each of the 8 BOLD runs found per subject (across all
+: For each of the 9 BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume and its skull-stripped version were generated
 using a custom methodology of *fMRIPrep*.

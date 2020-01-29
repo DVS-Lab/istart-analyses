@@ -1,0 +1,14 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1001/L1_task-MID_model-01_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat -I 1 -init
+42677
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 239 -l logs -N feat2_pre -j 42677  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat -I 1 -prestats
+43879
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 107 -l logs -N feat3_film -j 43879  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat -I 1 -stats

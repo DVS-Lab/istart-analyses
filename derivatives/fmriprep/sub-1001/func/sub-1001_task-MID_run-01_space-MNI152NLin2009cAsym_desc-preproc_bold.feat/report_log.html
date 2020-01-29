@@ -1,0 +1,81 @@
+<HTML><HEAD>
+<!--refreshstart-->
+<META HTTP-EQUIV=REFRESH CONTENT=5>
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Fri Jan 17 16:25:49 EST 2020<p>
+Feat main script<br><pre>
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1001/L1_task-MID_model-01_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat -I 1 -init
+42677
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 239 -l logs -N feat2_pre -j 42677  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat -I 1 -prestats
+43879
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 107 -l logs -N feat3_film -j 43879  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold.feat -I 1 -stats
+</pre><hr>Initialisation<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths /data/projects/istart-analyses/derivatives/fmriprep/sub-1001/func/sub-1001_task-MID_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold prefiltered_func_data -odt float
+Total original volumes = 265
+
+/usr/share/fsl/5.0/bin/fslroi prefiltered_func_data example_func 132 1
+</pre><hr>Preprocessing:Stage 1<br><pre>
+</pre><hr>Preprocessing:Stage 2<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -Tmean mean_func
+
+/usr/share/fsl/5.0/bin/bet2 mean_func mask -f 0.3 -n -m; /usr/share/fsl/5.0/bin/immv mask_mask mask
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet
+
+/usr/share/fsl/5.0/bin/fslstats prefiltered_func_data_bet -p 2 -p 98
+0.000000 14391.248047 
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_bet -thr 1439.1248047 -Tmin -bin mask -odt char
+
+/usr/share/fsl/5.0/bin/fslstats prefiltered_func_data -k mask -p 50
+11735.498047 
+
+/usr/share/fsl/5.0/bin/fslmaths mask -dilF mask
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_thresh -Tmean mean_func
+
+/usr/share/fsl/5.0/bin/susan prefiltered_func_data_thresh 8801.623535249999 2.5477707006369426 3 1 1 mean_func 8801.623535249999 prefiltered_func_data_smooth
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_smooth -mul 0.8521155182294412 prefiltered_func_data_intnorm
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_intnorm filtered_func_data
+
+/usr/share/fsl/5.0/bin/fslmaths filtered_func_data -Tmean mean_func
+
+/bin/rm -rf prefiltered_func_data*
+</pre><hr>Stats<br><pre>
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntLgGain.txt custom_timing_files/ev1.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntLgLoss.txt custom_timing_files/ev2.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntSmGain.txt custom_timing_files/ev3.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntSmLoss.txt custom_timing_files/ev4.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_AntNeu.txt custom_timing_files/ev5.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_ConHit.txt custom_timing_files/ev6.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-MID/EVfiles/sub-1001/run-01/sub-1001_run-1_ConMiss.txt custom_timing_files/ev7.txt
+
+/usr/share/fsl/5.0/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-maindir=`pwd`
-
+maindir="/data/projects/istart-analyses"
+cd $maindir
 TASK=sharedreward
 
 sub=$1
 run=$2
 ppi=$3 # 0 for activation, otherwise name of the roi
 sm=$4
+NVOLS=$5
 dtype=dctAROMAnonaggr
 
 # TODO: 
@@ -16,11 +17,11 @@ dtype=dctAROMAnonaggr
 
 
 # set input and output and adjust for ppi
-MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
+MAINOUTPUT=${maindir}/derivatives/fsl_task-sharedreward/sub-${sub}
 mkdir -p $MAINOUTPUT
 DATA=${maindir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_run-0${run}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz 
-CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}_task-${TASK}_run-0${run}_desc-confounds_run-0${run}_desc-confounds_desc-fslConfounds.tsv
-EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/${TASK}/run-0${run}
+CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_run-0${run}_desc-fslConfounds.tsv
+EVDIR=${maindir}/derivatives/fsl_task-sharedreward/EVfiles/${sub}/${TASK}/run-0${run}
 if [ "$ppi" == "0" ]; then
 	TYPE=act
 	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-01_type-${TYPE}_run-0${run}_sm-${sm}_variant-${dtype}
@@ -37,7 +38,7 @@ else
 	rm -rf ${OUTPUT}.feat
 fi
 
-ITEMPLATE=${maindir}/derivatives/fsl/templates/L1_task-${TASK}_model-01_type-${TYPE}.fsf
+ITEMPLATE=${maindir}/derivatives/fsl_task-sharedreward/templates/L1_task-${TASK}_model-01_type-${TYPE}.fsf
 OTEMPLATE=${MAINOUTPUT}/L1_task-${TASK}_model-01_seed-${ppi}_run-0${run}_variant-${dtype}.fsf
 if [ "$ppi" == "0" ]; then
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
@@ -45,6 +46,7 @@ if [ "$ppi" == "0" ]; then
 	-e 's@EVDIR@'$EVDIR'@g' \
 	-e 's@SMOOTH@'$sm'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
+    -e 's@NVOLS@'$NVOLS'@g' \
 	<$ITEMPLATE> $OTEMPLATE
 else
 	PHYS=${MAINOUTPUT}/ts_task-${TASK}_mask-${ppi}_run-0${run}.txt
@@ -56,6 +58,7 @@ else
 	-e 's@PHYS@'$PHYS'@g' \
 	-e 's@SMOOTH@'$sm'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
+    -e 's@NVOLS@'$NVOLS'@g' \
 	<$ITEMPLATE> $OTEMPLATE
 fi
 
