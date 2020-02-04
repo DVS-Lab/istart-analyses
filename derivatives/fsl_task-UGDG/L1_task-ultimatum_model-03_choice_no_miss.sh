@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+maindir="/data/projects/istart-analyses"
+
+TASK=UGDG
+
+sub=$1
+run=$2
+ppi=$3 # 0 for activation, otherwise name of the roi
+sm=$4
+dtype=dctAROMAnonaggr
+
+# TODO:
+# 2) add logging option if running through a second time
+# 4) execute with datalad run -m "message" --input "derivatives/fmriprep/*" --output "derivatives/fsl/*" "bash run_L1stats.sh"
+
+# set input and output and adjust for ppi
+
+MAINOUTPUT=${maindir}/derivatives/fsl_task-UGDG/sub-${sub} #######
+mkdir -p $MAINOUTPUT
+DATA=${maindir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_run-0${run}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
+CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_run-0${run}_desc-fslConfounds.tsv
+EVDIR=${maindir}/derivatives/fsl_task-UGDG/EVfiles/sub-${sub}/run-0${run}/sub-${sub}run-0${run}.bids
+
+
+
+if [ "$ppi" == "0" ]; then
+	TYPE=act
+	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-03_type-${TYPE}_run-0${run}_sm-${sm}_variant-${dtype}
+else
+	TYPE=ppi
+	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-03_type-${TYPE}_seed-${ppi}_run-0${run}_sm-${sm}_variant-${dtype}
+fi
+
+# check for output and skip existing
+if [ -e ${OUTPUT}.feat/cluster_mask_zstat1.nii.gz ]; then
+	exit
+else
+   echo "missing: $OUTPUT " >> ${maindir}/re-runL1.log
+	rm -rf ${OUTPUT}.feat
+fi
+
+ITEMPLATE=${maindir}/derivatives/fsl_task-UGDG/templates/L1_task-UGDG_model-03_type-act_choice_no_miss.fsf
+OTEMPLATE=${MAINOUTPUT}/L1_task-${TASK}_model-03_seed-${ppi}_run-0${run}_variant-${dtype}.fsf
+if [ "$ppi" == "0" ]; then
+	sed -e 's@OUTPUT@'$OUTPUT'@g' \
+	-e 's@DATA@'$DATA'@g' \
+	-e 's@EVDIR@'$EVDIR'@g' \
+	-e 's@SMOOTH@'$sm'@g' \
+	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
+	<$ITEMPLATE> $OTEMPLATE
+else
+	PHYS=${MAINOUTPUT}/ts_task-${TASK}_mask-${ppi}_run-0${run}.txt
+	MASK=${maindir}/masks/r${ppi}_func.nii.gz
+	fslmeants -i $DATAPPI -o $PHYS -m $MASK
+	sed -e 's@OUTPUT@'$OUTPUT'@g' \
+	-e 's@DATA@'$DATA'@g' \
+	-e 's@EVDIR@'$EVDIR'@g' \
+	-e 's@PHYS@'$PHYS'@g' \
+	-e 's@SMOOTH@'$sm'@g' \
+	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
+	<$ITEMPLATE> $OTEMPLATE
+fi
+
+# runs feat on output template
+feat $OTEMPLATE
+
+# fix registration as per NeuroStars post:
+# https://neurostars.org/t/performing-full-glm-analysis-with-fsl-on-the-bold-images-preprocessed-by-fmriprep-without-re-registering-the-data-to-the-mni-space/784/3
+mkdir -p ${OUTPUT}.feat/reg
+ln -s $FSLDIR/etc/flirtsch/ident.mat ${OUTPUT}.feat/reg/example_func2standard.mat
+ln -s $FSLDIR/etc/flirtsch/ident.mat ${OUTPUT}.feat/reg/standard2example_func.mat
+ln -s ${OUTPUT}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
+
+# delete unused files
+rm -rf ${OUTPUT}.feat/stats/res4d.nii.gz
+rm -rf ${OUTPUT}.feat/stats/corrections.nii.gz
+rm -rf ${OUTPUT}.feat/stats/threshac1.nii.gz
+
+if [ ! "$ppi" == "0" ]; then
+	rm -rf ${OUTPUT}.feat/filtered_func_data.nii.gz
+fi

@@ -1,0 +1,83 @@
+<HTML><HEAD>
+<!--refreshstart-->
+<META HTTP-EQUIV=REFRESH CONTENT=5>
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Mon Feb  3 15:22:28 EST 2020<p>
+Feat main script<br><pre>
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_seed-0_run-02_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-02_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-02_sm-0_variant-dctAROMAnonaggr.feat -I 1 -init
+23806
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 203 -l logs -N feat2_pre -j 23806  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-02_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-02_sm-0_variant-dctAROMAnonaggr.feat -I 1 -prestats
+24306
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 432 -l logs -N feat3_film -j 24306  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-02_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-02_sm-0_variant-dctAROMAnonaggr.feat -I 1 -stats
+</pre><hr>Initialisation<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths /data/projects/istart-analyses/derivatives/fmriprep/sub-1006/func/sub-1006_task-UGDG_run-02_space-MNI152NLin2009cAsym_desc-preproc_bold prefiltered_func_data -odt float
+Total original volumes = 225
+
+/usr/share/fsl/5.0/bin/fslroi prefiltered_func_data example_func 112 1
+</pre><hr>Preprocessing:Stage 1<br><pre>
+</pre><hr>Preprocessing:Stage 2<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -Tmean mean_func
+
+/usr/share/fsl/5.0/bin/bet2 mean_func mask -f 0.3 -n -m; /usr/share/fsl/5.0/bin/immv mask_mask mask
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet
+
+/usr/share/fsl/5.0/bin/fslstats prefiltered_func_data_bet -p 2 -p 98
+0.000000 15129.826172 
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_bet -thr 1512.9826171999998 -Tmin -bin mask -odt char
+
+/usr/share/fsl/5.0/bin/fslstats prefiltered_func_data -k mask -p 50
+12703.591797 
+
+/usr/share/fsl/5.0/bin/fslmaths mask -dilF mask
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_thresh -Tmean mean_func
+
+/usr/share/fsl/5.0/bin/susan prefiltered_func_data_thresh 9527.693847749999 2.5477707006369426 3 1 1 mean_func 9527.693847749999 prefiltered_func_data_smooth
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_smooth -mul 0.7871789459073723 prefiltered_func_data_intnorm
+
+/usr/share/fsl/5.0/bin/fslmaths prefiltered_func_data_intnorm filtered_func_data
+
+/usr/share/fsl/5.0/bin/fslmaths filtered_func_data -Tmean mean_func
+
+/bin/rm -rf prefiltered_func_data*
+</pre><hr>Stats<br><pre>
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-UGDG/EVfiles/sub-1006/run-02/sub-1006run-02.bids_cue_dict.txt custom_timing_files/ev1.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-UGDG/EVfiles/sub-1006/run-02/sub-1006run-02.bids_cue_ug-prop.txt custom_timing_files/ev2.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-UGDG/EVfiles/sub-1006/run-02/sub-1006run-02.bids_cue_ug-resp.txt custom_timing_files/ev3.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-UGDG/EVfiles/sub-1006/run-02/sub-1006run-02.bids_dec_dg-prop_choice.txt custom_timing_files/ev4.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-UGDG/EVfiles/sub-1006/run-02/sub-1006run-02.bids_dec_ug-prop_choice.txt custom_timing_files/ev5.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/5.0/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-UGDG/EVfiles/sub-1006/run-02/sub-1006run-02.bids_dec_ug-resp_choice.txt custom_timing_files/ev6.txt
+
+paste -d  ' '  /data/projects/istart-analyses/derivatives/fsl/confounds/sub-1006/sub-1006_task-UGDG_run-02_desc-fslConfounds.tsv > confoundevs.txt
+
+/usr/share/fsl/5.0/bin/feat_model design confoundevs.txt
+
+/usr/share/fsl/5.0/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

@@ -1,0 +1,3 @@
+Cluster Index	Voxels	P	-log10(P)	Z-MAX	Z-MAX X (vox)	Z-MAX Y (vox)	Z-MAX Z (vox)	Z-COG X (vox)	Z-COG Y (vox)	Z-COG Z (vox)	COPE-MAX	COPE-MAX X (vox)	COPE-MAX Y (vox)	COPE-MAX Z (vox)	COPE-MEAN
+2	133	0.000366	3.44	4.15	34	43	24	32.8	44.2	24.3	437	32	43	24	170
+1	91	0.00731	2.14	3.65	23	10	25	23	12	24.1	207	21	12	24	85.8

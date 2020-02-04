@@ -1,0 +1,39 @@
+</pre><hr>Stats<br><pre>
+
+mkdir -p custom_timing_files ; /usr/share/fsl/6.0.3/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/EVfiles/1001/sharedreward/run-01_block_computer_punish.txt custom_timing_files/ev1.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/6.0.3/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/EVfiles/1001/sharedreward/run-01_block_computer_reward.txt custom_timing_files/ev2.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/6.0.3/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/EVfiles/1001/sharedreward/run-01_block_friend_punish.txt custom_timing_files/ev3.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/6.0.3/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/EVfiles/1001/sharedreward/run-01_block_friend_reward.txt custom_timing_files/ev4.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/6.0.3/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/EVfiles/1001/sharedreward/run-01_block_stranger_punish.txt custom_timing_files/ev5.txt
+
+mkdir -p custom_timing_files ; /usr/share/fsl/6.0.3/bin/fslFixText /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/EVfiles/1001/sharedreward/run-01_block_stranger_reward.txt custom_timing_files/ev6.txt
+
+/usr/share/fsl/6.0.3/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
+Log directory is: stats
+paradigm.getDesignMatrix().Nrows()=231
+paradigm.getDesignMatrix().Ncols()=6
+sizeTS=231
+numTS=79137
+Calculating residuals...
+Completed
+Estimating residual autocorrelation...
+Calculating raw AutoCorrs... Completed
+mode = 10302.8
+sig = 790
+Spatially smoothing auto corr estimates
+..............
+Completed
+Tukey M = 15
+Tukey estimates... Completed
+Completed
+Prewhitening and Computing PEs...
+Percentage done:
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,Completed
+Saving results... 
+Completed
+
+/usr/share/fsl/6.0.3/bin/smoothest -d 224   -m mask -r stats/res4d > stats/smoothness

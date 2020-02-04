@@ -1,0 +1,21 @@
+<HTML><HEAD>
+<!--refreshstart-->
+<META HTTP-EQUIV=REFRESH CONTENT=5>
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Mon Feb  3 13:54:57 EST 2020<p>
+Feat main script<br><pre>
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-02_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-02_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-02_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat -I 1 -init
+</pre><hr>Initialisation<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths /data/projects/istart-analyses/derivatives/fmriprep/sub-1006/func/sub-1006_task-UGDG_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold prefiltered_func_data -odt float
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

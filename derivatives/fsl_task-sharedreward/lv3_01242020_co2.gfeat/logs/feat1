@@ -1,0 +1,27 @@
+
+/bin/cp /tmp/feat_Fkct2L.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat -gfeatprep
+30056
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 30056  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat -I 1 -flame1
+37842
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 37842 -t ./.flame
+38131
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 38131  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat -flame3
+38196
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 38196  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat -poststats 1
+38312
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 38312  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat -stop
+38988
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 38988  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/lv3_01242020_co2.gfeat -stop
+39148

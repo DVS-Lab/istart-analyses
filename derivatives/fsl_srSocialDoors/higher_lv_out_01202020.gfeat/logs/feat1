@@ -1,0 +1,72 @@
+
+/bin/cp /tmp/feat_g1irSm.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat -gfeatprep
+44548
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -I 1 -flame1
+8612
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 8612 -t ./.flame
+8870
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 8870  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -flame3
+8937
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 8937  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -poststats 1
+9015
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 9015  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -stop
+10178
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -I 2 -flame1
+10369
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 10369 -t ./.flame
+10662
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 10662  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -flame3
+10747
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 10747  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -poststats 1
+10878
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 10878  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -stop
+11752
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -I 3 -flame1
+11947
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 11947 -t ./.flame
+12203
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 12203  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -flame3
+12288
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 12288  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -poststats 1
+12377
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 12377  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -stop
+13512
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -I 4 -flame1
+13755
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 13755 -t ./.flame
+14066
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 14066  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -flame3
+14175
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 14175  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -poststats 1
+14269
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 14269  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -stop
+15172
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 10178,11752,13512,15172  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat -stop
+15328

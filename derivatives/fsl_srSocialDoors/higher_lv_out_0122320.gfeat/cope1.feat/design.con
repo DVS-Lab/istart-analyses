@@ -1,0 +1,10 @@
+/ContrastName1	doors - social 
+/ContrastName2	social - doors 
+/NumWaves	6
+/NumContrasts	2
+/PPheights		2.000000e+00	2.000000e+00
+/RequiredEffect		35.402	35.402
+
+/Matrix
+1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+-1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 

@@ -1,0 +1,3 @@
+</pre><hr>Initialisation<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths /data/projects/istart-analyses/derivatives/fmriprep/sub-1006/func/sub-1006_task-UGDG_run-01_space-MNI152NLin2009cAsym_desc-preproc_bold prefiltered_func_data -odt float

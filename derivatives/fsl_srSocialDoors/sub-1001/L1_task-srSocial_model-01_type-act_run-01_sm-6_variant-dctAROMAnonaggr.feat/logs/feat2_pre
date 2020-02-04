@@ -1,0 +1,28 @@
+</pre><hr>Preprocessing:Stage 1<br><pre>
+</pre><hr>Preprocessing:Stage 2<br><pre>
+
+/usr/share/fsl/6.0.3/bin/fslstats prefiltered_func_data -p 2 -p 98
+0.197266 14483.060547 
+
+/usr/share/fsl/6.0.3/bin/fslmaths prefiltered_func_data -thr 1448.4835941 -Tmin -bin mask -odt char
+
+/usr/share/fsl/6.0.3/bin/fslstats prefiltered_func_data -k mask -p 50
+11379.125977 
+
+/usr/share/fsl/6.0.3/bin/fslmaths mask -dilF mask
+
+/usr/share/fsl/6.0.3/bin/fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh
+
+/usr/share/fsl/6.0.3/bin/fslmaths prefiltered_func_data_thresh -Tmean mean_func
+
+/usr/share/fsl/6.0.3/bin/susan prefiltered_func_data_thresh 8534.19653325 2.54777070064 3 1 1 mean_func 8534.19653325 prefiltered_func_data_smooth
+
+/usr/share/fsl/6.0.3/bin/fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth
+
+/usr/share/fsl/6.0.3/bin/fslmaths prefiltered_func_data_smooth -mul 0.878802117158 prefiltered_func_data_intnorm
+
+/usr/share/fsl/6.0.3/bin/fslmaths prefiltered_func_data_intnorm filtered_func_data
+
+/usr/share/fsl/6.0.3/bin/fslmaths filtered_func_data -Tmean mean_func
+
+/bin/rm -rf prefiltered_func_data*

@@ -1,0 +1,297 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat -gfeatprep
+25906
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat -I 1 -flame1
+45628
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 45628 -t ./.flame
+46387
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 46387  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat -flame3
+46738
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 46738  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat -poststats 1
+46916
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 46916  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat -stop
+48375
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat -I 2 -flame1
+48715
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 48715 -t ./.flame
+748
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 748  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat -flame3
+966
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 966  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat -poststats 1
+1080
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 1080  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope2.feat -stop
+2505
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat -I 3 -flame1
+3162
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 3162 -t ./.flame
+4074
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 4074  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat -flame3
+4448
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 4448  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat -poststats 1
+4597
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 4597  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope3.feat -stop
+5858
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat -I 4 -flame1
+6120
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 6120 -t ./.flame
+6676
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 6676  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat -flame3
+6928
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 6928  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat -poststats 1
+7070
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 7070  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope4.feat -stop
+8411
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat -I 5 -flame1
+8698
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 8698 -t ./.flame
+9268
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 9268  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat -flame3
+9541
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 9541  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat -poststats 1
+9742
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 9742  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope5.feat -stop
+10989
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat -I 6 -flame1
+11210
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 11210 -t ./.flame
+11719
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 11719  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat -flame3
+11855
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 11855  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat -poststats 1
+11973
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 11973  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope6.feat -stop
+13709
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat -I 7 -flame1
+13975
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 13975 -t ./.flame
+14490
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 14490  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat -flame3
+14622
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 14622  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat -poststats 1
+14770
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 14770  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope7.feat -stop
+16223
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat -I 8 -flame1
+16445
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 16445 -t ./.flame
+17176
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 17176  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat -flame3
+17307
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 17307  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat -poststats 1
+17445
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 17445  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope8.feat -stop
+19328
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat -I 9 -flame1
+19565
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 19565 -t ./.flame
+20111
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 20111  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat -flame3
+20217
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 20217  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat -poststats 1
+20349
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 20349  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope9.feat -stop
+22080
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat -I 10 -flame1
+22277
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 22277 -t ./.flame
+22922
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 22922  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat -flame3
+23108
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 23108  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat -poststats 1
+23239
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 23239  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope10.feat -stop
+24827
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat -I 11 -flame1
+25053
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 25053 -t ./.flame
+25584
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 25584  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat -flame3
+25782
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 25782  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat -poststats 1
+25913
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 25913  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope11.feat -stop
+27475
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat -I 12 -flame1
+27720
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 27720 -t ./.flame
+28116
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 28116  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat -flame3
+28269
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 28269  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat -poststats 1
+28434
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 28434  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope12.feat -stop
+29988
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat -I 13 -flame1
+30284
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 30284 -t ./.flame
+30769
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 30769  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat -flame3
+31000
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 31000  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat -poststats 1
+31111
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 31111  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope13.feat -stop
+32854
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat -I 14 -flame1
+33205
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 33205 -t ./.flame
+33638
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 33638  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat -flame3
+33757
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 33757  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat -poststats 1
+33865
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 33865  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope14.feat -stop
+35454
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat -I 15 -flame1
+35798
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 35798 -t ./.flame
+36241
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 36241  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat -flame3
+36392
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 36392  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat -poststats 1
+36499
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 36499  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope15.feat -stop
+38160
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat -I 16 -flame1
+38549
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 38549 -t ./.flame
+38946
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 38946  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat -flame3
+39018
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 39018  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat -poststats 1
+39170
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 39170  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope16.feat -stop
+40542
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat -I 17 -flame1
+40903
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 40903 -t ./.flame
+41369
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 41369  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat -flame3
+41554
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 41554  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat -poststats 1
+41664
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 41664  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope17.feat -stop
+43204
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat -I 18 -flame1
+43634
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 43634 -t ./.flame
+44211
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 44211  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat -flame3
+44435
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 44435  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat -poststats 1
+44520
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 44520  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope18.feat -stop
+45984
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 25906  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat -I 19 -flame1
+46379
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 46379 -t ./.flame
+47041
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 47041  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat -flame3
+47137
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 47137  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat -poststats 1
+47259
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 47259  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat -stop
+48764
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 48375,2505,5858,8411,10989,13709,16223,19328,22080,24827,27475,29988,32854,35454,38160,40542,43204,45984,48764  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope19.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat -stop
+49119

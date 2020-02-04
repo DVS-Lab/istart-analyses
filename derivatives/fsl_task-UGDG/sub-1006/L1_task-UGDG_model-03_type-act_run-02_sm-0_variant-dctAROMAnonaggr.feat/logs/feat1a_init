@@ -1,0 +1,6 @@
+</pre><hr>Initialisation<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths /data/projects/istart-analyses/derivatives/fmriprep/sub-1006/func/sub-1006_task-UGDG_run-02_space-MNI152NLin2009cAsym_desc-preproc_bold prefiltered_func_data -odt float
+Total original volumes = 225
+
+/usr/share/fsl/5.0/bin/fslroi prefiltered_func_data example_func 112 1

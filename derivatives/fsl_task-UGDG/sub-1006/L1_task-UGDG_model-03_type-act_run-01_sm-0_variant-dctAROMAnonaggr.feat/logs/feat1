@@ -1,0 +1,21 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat -I 1 -init
+35209
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 203 -l logs -N feat2_pre -j 35209  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat -I 1 -prestats
+35719
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 442 -l logs -N feat3_film -j 35719  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat -I 1 -stats
+38124
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 119 -l logs -N feat4_post -j 38124  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat -poststats 0 
+18505
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 35719,38124,18505  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-03_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat -stop
+20804

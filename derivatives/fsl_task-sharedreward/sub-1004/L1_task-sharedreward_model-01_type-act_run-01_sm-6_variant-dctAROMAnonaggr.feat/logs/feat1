@@ -1,0 +1,21 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -init
+14333
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 23 -l logs -N feat2_pre -j 14333  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -prestats
+15139
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 38 -l logs -N feat3_film -j 15139  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -stats
+19419
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 119 -l logs -N feat4_post -j 19419  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -poststats 0 
+33908
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 15139,19419,33908  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -stop
+44997

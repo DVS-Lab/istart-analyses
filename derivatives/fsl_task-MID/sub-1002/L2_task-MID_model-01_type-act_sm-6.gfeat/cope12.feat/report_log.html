@@ -1,0 +1,61 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Thu Jan 23 10:41:23 EST 2020<p>
+<pre>
+
+cp -r ../.files .files
+</pre><hr>Higher-level stats<br><pre>
+
+cat ../design.lcon | awk '{ print  }' > design.lcon
+/usr/share/fsl/5.0/bin/flameo --cope=filtered_func_data --vc=var_filtered_func_data --dvc=tdof_filtered_func_data --mask=mask --ld=stats --dm=design.mat --cs=design.grp --tc=design.con  --runmode=fe
+Log directory is: stats
+Setting up:
+ntptsing=2.000000 
+
+evs_group=1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, var_filtered_func_data, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=2
+ngs=1
+nvoxels=80861
+Running:
+nmaskvoxels=80861
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats
+
+/bin/rm -f stats/zem* stats/zols* stats/mask* ; /bin/mv dof stats
+
+/usr/share/fsl/5.0/bin/smoothest -d 1 -m mask -r stats/res4d > stats/smoothness
+</pre><hr>Post-stats<br><pre>
+
+/usr/share/fsl/5.0/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
+
+echo 80861 > thresh_zstat1.vol
+zstat1: DLH=0.372853 VOLUME=80861 RESELS=13.6202
+
+/usr/share/fsl/5.0/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.1 -p 0.05 -d 0.372853 --volume=80861 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z > cluster_zstat1_std.txt
+
+/usr/share/fsl/5.0/bin/cluster2html . cluster_zstat1 -std
+
+/usr/share/fsl/5.0/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
+3.100714 4.601163 
+Rendering using zmin=3.100714 zmax=4.601163
+
+/usr/share/fsl/5.0/bin/overlay 1 0 example_func -a thresh_zstat1 3.100714 4.601163 rendered_thresh_zstat1
+
+/usr/share/fsl/5.0/bin/slicer rendered_thresh_zstat1 -S 2 750 rendered_thresh_zstat1.png
+
+/bin/cp /usr/share/fsl/5.0/etc/luts/ramp.gif .ramp.gif
+
+mkdir -p tsplot ; /usr/share/fsl/5.0/bin/tsplot . -f filtered_func_data -o tsplot
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

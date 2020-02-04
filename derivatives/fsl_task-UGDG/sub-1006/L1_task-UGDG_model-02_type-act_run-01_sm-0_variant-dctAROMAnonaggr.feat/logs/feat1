@@ -1,0 +1,8 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-02_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-02_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1006/L1_task-UGDG_model-02_type-act_run-01_sm-0_variant-dctAROMAnonaggr.feat -I 1 -init

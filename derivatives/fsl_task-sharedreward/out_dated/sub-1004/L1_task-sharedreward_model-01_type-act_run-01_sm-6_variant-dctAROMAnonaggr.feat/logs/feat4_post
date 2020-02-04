@@ -1,0 +1,310 @@
+</pre><hr>Post-stats<br><pre>
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
+
+echo 82171 > thresh_zstat1.vol
+zstat1: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat2 -mas mask thresh_zstat2
+
+echo 82171 > thresh_zstat2.vol
+zstat2: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat3 -mas mask thresh_zstat3
+
+echo 82171 > thresh_zstat3.vol
+zstat3: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat4 -mas mask thresh_zstat4
+
+echo 82171 > thresh_zstat4.vol
+zstat4: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat5 -mas mask thresh_zstat5
+
+echo 82171 > thresh_zstat5.vol
+zstat5: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat6 -mas mask thresh_zstat6
+
+echo 82171 > thresh_zstat6.vol
+zstat6: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat7 -mas mask thresh_zstat7
+
+echo 82171 > thresh_zstat7.vol
+zstat7: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat8 -mas mask thresh_zstat8
+
+echo 82171 > thresh_zstat8.vol
+zstat8: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat9 -mas mask thresh_zstat9
+
+echo 82171 > thresh_zstat9.vol
+zstat9: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat10 -mas mask thresh_zstat10
+
+echo 82171 > thresh_zstat10.vol
+zstat10: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat11 -mas mask thresh_zstat11
+
+echo 82171 > thresh_zstat11.vol
+zstat11: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat12 -mas mask thresh_zstat12
+
+echo 82171 > thresh_zstat12.vol
+zstat12: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat13 -mas mask thresh_zstat13
+
+echo 82171 > thresh_zstat13.vol
+zstat13: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat14 -mas mask thresh_zstat14
+
+echo 82171 > thresh_zstat14.vol
+zstat14: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat15 -mas mask thresh_zstat15
+
+echo 82171 > thresh_zstat15.vol
+zstat15: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat16 -mas mask thresh_zstat16
+
+echo 82171 > thresh_zstat16.vol
+zstat16: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat17 -mas mask thresh_zstat17
+
+echo 82171 > thresh_zstat17.vol
+zstat17: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat18 -mas mask thresh_zstat18
+
+echo 82171 > thresh_zstat18.vol
+zstat18: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/fslmaths stats/zstat19 -mas mask thresh_zstat19
+
+echo 82171 > thresh_zstat19.vol
+zstat19: DLH=0.288188 VOLUME=82171 RESELS=16.0434
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat1 -t 3.1000000000000005 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26  --olmax=lmax_zstat1.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope1 > cluster_zstat1.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat1 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat2 -t 3.1000000000000005 --othresh=thresh_zstat2 -o cluster_mask_zstat2 --connectivity=26  --olmax=lmax_zstat2.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope2 > cluster_zstat2.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat2 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat3 -t 3.1000000000000005 --othresh=thresh_zstat3 -o cluster_mask_zstat3 --connectivity=26  --olmax=lmax_zstat3.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope3 > cluster_zstat3.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat3 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat4 -t 3.1000000000000005 --othresh=thresh_zstat4 -o cluster_mask_zstat4 --connectivity=26  --olmax=lmax_zstat4.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope4 > cluster_zstat4.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat4 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat5 -t 3.1000000000000005 --othresh=thresh_zstat5 -o cluster_mask_zstat5 --connectivity=26  --olmax=lmax_zstat5.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope5 > cluster_zstat5.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat5 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat6 -t 3.1000000000000005 --othresh=thresh_zstat6 -o cluster_mask_zstat6 --connectivity=26  --olmax=lmax_zstat6.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope6 > cluster_zstat6.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat6 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat7 -t 3.1000000000000005 --othresh=thresh_zstat7 -o cluster_mask_zstat7 --connectivity=26  --olmax=lmax_zstat7.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope7 > cluster_zstat7.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat7 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat8 -t 3.1000000000000005 --othresh=thresh_zstat8 -o cluster_mask_zstat8 --connectivity=26  --olmax=lmax_zstat8.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope8 > cluster_zstat8.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat8 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat9 -t 3.1000000000000005 --othresh=thresh_zstat9 -o cluster_mask_zstat9 --connectivity=26  --olmax=lmax_zstat9.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope9 > cluster_zstat9.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat9 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat10 -t 3.1000000000000005 --othresh=thresh_zstat10 -o cluster_mask_zstat10 --connectivity=26  --olmax=lmax_zstat10.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope10 > cluster_zstat10.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat10 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat11 -t 3.1000000000000005 --othresh=thresh_zstat11 -o cluster_mask_zstat11 --connectivity=26  --olmax=lmax_zstat11.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope11 > cluster_zstat11.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat11 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat12 -t 3.1000000000000005 --othresh=thresh_zstat12 -o cluster_mask_zstat12 --connectivity=26  --olmax=lmax_zstat12.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope12 > cluster_zstat12.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat12 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat13 -t 3.1000000000000005 --othresh=thresh_zstat13 -o cluster_mask_zstat13 --connectivity=26  --olmax=lmax_zstat13.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope13 > cluster_zstat13.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat13 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat14 -t 3.1000000000000005 --othresh=thresh_zstat14 -o cluster_mask_zstat14 --connectivity=26  --olmax=lmax_zstat14.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope14 > cluster_zstat14.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat14 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat15 -t 3.1000000000000005 --othresh=thresh_zstat15 -o cluster_mask_zstat15 --connectivity=26  --olmax=lmax_zstat15.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope15 > cluster_zstat15.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat15 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat16 -t 3.1000000000000005 --othresh=thresh_zstat16 -o cluster_mask_zstat16 --connectivity=26  --olmax=lmax_zstat16.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope16 > cluster_zstat16.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat16 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat17 -t 3.1000000000000005 --othresh=thresh_zstat17 -o cluster_mask_zstat17 --connectivity=26  --olmax=lmax_zstat17.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope17 > cluster_zstat17.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat17 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat18 -t 3.1000000000000005 --othresh=thresh_zstat18 -o cluster_mask_zstat18 --connectivity=26  --olmax=lmax_zstat18.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope18 > cluster_zstat18.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat18 
+
+/usr/share/fsl/6.0.3/bin/cluster -i thresh_zstat19 -t 3.1000000000000005 --othresh=thresh_zstat19 -o cluster_mask_zstat19 --connectivity=26  --olmax=lmax_zstat19.txt --scalarname=Z -p 0.05 -d 0.288188 --volume=82171 -c stats/cope19 > cluster_zstat19.txt
+
+/usr/share/fsl/6.0.3/bin/cluster2html . cluster_zstat19 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
+3.100968 6.535238 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null
+3.100377 5.235725 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat3 -l 0.0001 -R 2>/dev/null
+3.103898 5.552825 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat4 -l 0.0001 -R 2>/dev/null
+3.101233 4.970590 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat5 -l 0.0001 -R 2>/dev/null
+3.100081 5.257120 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat6 -l 0.0001 -R 2>/dev/null
+0.000000 0.000000 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat7 -l 0.0001 -R 2>/dev/null
+3.104385 4.068407 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat8 -l 0.0001 -R 2>/dev/null
+3.105642 6.068454 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat9 -l 0.0001 -R 2>/dev/null
+3.100424 6.126381 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat10 -l 0.0001 -R 2>/dev/null
+3.102380 4.912968 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat11 -l 0.0001 -R 2>/dev/null
+3.101105 5.139382 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat12 -l 0.0001 -R 2>/dev/null
+0.000000 0.000000 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat13 -l 0.0001 -R 2>/dev/null
+3.104598 4.229456 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat14 -l 0.0001 -R 2>/dev/null
+3.100370 4.877677 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat15 -l 0.0001 -R 2>/dev/null
+0.000000 0.000000 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat16 -l 0.0001 -R 2>/dev/null
+3.104979 5.025851 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat17 -l 0.0001 -R 2>/dev/null
+3.100175 5.297239 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat18 -l 0.0001 -R 2>/dev/null
+3.118498 3.996447 
+
+/usr/share/fsl/6.0.3/bin/fslstats thresh_zstat19 -l 0.0001 -R 2>/dev/null
+3.107197 5.174418 
+Rendering using zmin=3.100081 zmax=6.535238
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat1 3.100081 6.535238 rendered_thresh_zstat1
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat1 -A 750 rendered_thresh_zstat1.png
+
+/bin/cp /usr/share/fsl/6.0.3/etc/luts/ramp.gif .ramp.gif
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat2 3.100081 6.535238 rendered_thresh_zstat2
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat2 -A 750 rendered_thresh_zstat2.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat3 3.100081 6.535238 rendered_thresh_zstat3
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat3 -A 750 rendered_thresh_zstat3.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat4 3.100081 6.535238 rendered_thresh_zstat4
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat4 -A 750 rendered_thresh_zstat4.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat5 3.100081 6.535238 rendered_thresh_zstat5
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat5 -A 750 rendered_thresh_zstat5.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat6 3.100081 6.535238 rendered_thresh_zstat6
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat6 -A 750 rendered_thresh_zstat6.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat7 3.100081 6.535238 rendered_thresh_zstat7
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat7 -A 750 rendered_thresh_zstat7.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat8 3.100081 6.535238 rendered_thresh_zstat8
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat8 -A 750 rendered_thresh_zstat8.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat9 3.100081 6.535238 rendered_thresh_zstat9
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat9 -A 750 rendered_thresh_zstat9.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat10 3.100081 6.535238 rendered_thresh_zstat10
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat10 -A 750 rendered_thresh_zstat10.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat11 3.100081 6.535238 rendered_thresh_zstat11
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat11 -A 750 rendered_thresh_zstat11.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat12 3.100081 6.535238 rendered_thresh_zstat12
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat12 -A 750 rendered_thresh_zstat12.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat13 3.100081 6.535238 rendered_thresh_zstat13
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat13 -A 750 rendered_thresh_zstat13.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat14 3.100081 6.535238 rendered_thresh_zstat14
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat14 -A 750 rendered_thresh_zstat14.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat15 3.100081 6.535238 rendered_thresh_zstat15
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat15 -A 750 rendered_thresh_zstat15.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat16 3.100081 6.535238 rendered_thresh_zstat16
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat16 -A 750 rendered_thresh_zstat16.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat17 3.100081 6.535238 rendered_thresh_zstat17
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat17 -A 750 rendered_thresh_zstat17.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat18 3.100081 6.535238 rendered_thresh_zstat18
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat18 -A 750 rendered_thresh_zstat18.png
+
+/usr/share/fsl/6.0.3/bin/overlay 1 0 example_func -a thresh_zstat19 3.100081 6.535238 rendered_thresh_zstat19
+
+/usr/share/fsl/6.0.3/bin/slicer rendered_thresh_zstat19 -A 750 rendered_thresh_zstat19.png
+
+mkdir -p tsplot ; /usr/share/fsl/6.0.3/bin/tsplot . -f filtered_func_data -o tsplot

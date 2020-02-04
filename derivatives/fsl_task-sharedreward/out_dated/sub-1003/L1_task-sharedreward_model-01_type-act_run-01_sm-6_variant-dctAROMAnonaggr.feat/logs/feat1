@@ -1,0 +1,34 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -init
+31364
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 23 -l logs -N feat2_pre -j 31364  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -prestats
+32923
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 7 -l logs -N feat3_film -j 32923  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -stats
+36128
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 119 -l logs -N feat4_post -j 36128  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -poststats 0 
+child process exited abnormally
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 312)
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 119 -l logs -N feat4_post -j 36128  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -poststats 0 
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE

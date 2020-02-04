@@ -1,0 +1,207 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID-01_type-act.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat -gfeatprep
+44434
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat -I 1 -flame1
+14892
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 14892 -t ./.flame
+15621
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 15621  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat -flame3
+15938
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 15938  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat -poststats 1
+16056
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 16056  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope1.feat -stop
+17991
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat -I 2 -flame1
+18411
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 18411 -t ./.flame
+19334
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 19334  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat -flame3
+19707
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 19707  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat -poststats 1
+19834
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 19834  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope2.feat -stop
+21368
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat -I 3 -flame1
+21884
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 21884 -t ./.flame
+22650
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 22650  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat -flame3
+23024
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 23024  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat -poststats 1
+23204
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 23204  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope3.feat -stop
+24946
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat -I 4 -flame1
+25321
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 25321 -t ./.flame
+26252
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 26252  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat -flame3
+26596
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 26596  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat -poststats 1
+26792
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 26792  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope4.feat -stop
+28215
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat -I 5 -flame1
+28539
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 28539 -t ./.flame
+29388
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 29388  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat -flame3
+29738
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 29738  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat -poststats 1
+29903
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 29903  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope5.feat -stop
+31640
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat -I 6 -flame1
+32004
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 32004 -t ./.flame
+32888
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 32888  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat -flame3
+33249
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 33249  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat -poststats 1
+33385
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 33385  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope6.feat -stop
+34187
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat -I 7 -flame1
+34377
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 34377 -t ./.flame
+35087
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 35087  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat -flame3
+35122
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 35122  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat -poststats 1
+35200
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 35200  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope7.feat -stop
+35894
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat -I 8 -flame1
+36100
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 36100 -t ./.flame
+36641
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 36641  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat -flame3
+36666
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 36666  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat -poststats 1
+36761
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 36761  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope8.feat -stop
+37623
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat -I 9 -flame1
+37826
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 37826 -t ./.flame
+38446
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 38446  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat -flame3
+38491
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 38491  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat -poststats 1
+38566
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 38566  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope9.feat -stop
+39233
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat -I 10 -flame1
+39456
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 39456 -t ./.flame
+39979
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 39979  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat -flame3
+40003
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 40003  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat -poststats 1
+40082
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 40082  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope10.feat -stop
+40797
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat -I 11 -flame1
+40983
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 40983 -t ./.flame
+41556
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 41556  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat -flame3
+41616
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 41616  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat -poststats 1
+41730
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 41730  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope11.feat -stop
+42451
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat -I 12 -flame1
+42662
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 42662 -t ./.flame
+43348
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 43348  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat -flame3
+43374
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 43374  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat -poststats 1
+43450
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 43450  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope12.feat -stop
+44272
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44434  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat -I 13 -flame1
+44519
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 44519 -t ./.flame
+45118
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 45118  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat -flame3
+45165
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 60 -l logs -N feat4_post -j 45165  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat -poststats 1
+45243
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 45243  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat -stop
+45893
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 17991,21368,24946,28215,31640,34187,35894,37623,39233,40797,42451,44272,45893  /usr/share/fsl/5.0/bin/feat /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat/cope13.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_task-MID/sub-1004/L2_task-MID_model-01_type-act_sm-6.gfeat -stop
+46051

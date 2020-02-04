@@ -1,0 +1,12 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_task-UGDG/sub-1003/L1_task-UGDG_model-01_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+Can't open /data/projects/istart-analyses/derivatives/fsl_task-UGDG/EVfiles/sub-1003/run-01/sub-1003run-01.bids_dec_dg-prop_less.txt for reading
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/usr/share/fsl/5.0/bin/feat_model design
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE

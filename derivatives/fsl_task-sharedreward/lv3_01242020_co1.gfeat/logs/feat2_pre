@@ -1,0 +1,241 @@
+</pre><hr>Higher-level input files preparation<br><pre>
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1001/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1002/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_fEG4cu -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_A6zLNa -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope5 -out frgrot_N2dbjN -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope6 -out frgrot_COEORf -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope7 -out frgrot_ro5EGL -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope8 -out frgrot_RrZ8bb -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope9 -out frgrot_OeqHpP -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_sCOrKe -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope10 -out frgrot_ykC8sR -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope11 -out frgrot_tMYfpg -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope12 -out frgrot_unpa5S -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope13 -out frgrot_cW7Y6i -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope14 -out frgrot_G8ZzCQ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope15 -out frgrot_zDkAdr -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope16 -out frgrot_7E557S -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope17 -out frgrot_Wcygus -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope18 -out frgrot_44I3x3 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope19 -out frgrot_4CovQu -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_Po5kLW -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_JEYtFx -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_qQa5m8 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope5 -out frgrot_REeISz -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope6 -out frgrot_P03LP1 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope7 -out frgrot_HzwIoC -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope8 -out frgrot_KB4W43 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope9 -out frgrot_uU2XKE -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_ZgiyJr -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_XUHuso -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_3bsRwc -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_OtTU3e -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope10 -out frgrot_yWYAoP -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope11 -out frgrot_NtqFqj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope12 -out frgrot_KMud4S -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope13 -out frgrot_VxNyMo -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope14 -out frgrot_Ra4at1 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope15 -out frgrot_vQILNt -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope16 -out frgrot_Enl5I4 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope17 -out frgrot_qq2KVu -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope18 -out frgrot_uDvcz8 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope19 -out frgrot_ksIa6A -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_Wn3abe -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_6C9eZE -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_zs3BMh -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope5 -out frgrot_J4PzzM -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope6 -out frgrot_ovx93l -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope7 -out frgrot_QcpNqN -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope8 -out frgrot_fJQ9Vt -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope9 -out frgrot_SodEuT -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_egRegq -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope10 -out frgrot_gP3BiW -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope11 -out frgrot_UKanft -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope12 -out frgrot_lxDLn0 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope13 -out frgrot_h4Plsy -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope14 -out frgrot_QLDCRZ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope15 -out frgrot_vVFhjD -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope16 -out frgrot_fQ3gI4 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope17 -out frgrot_BkdcTE -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope18 -out frgrot_zArioc -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope19 -out frgrot_8E7UcN -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_8tCnge -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_a9xUKN -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_AFxujj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope5 -out frgrot_u2OPUN -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope6 -out frgrot_6xCOHj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope7 -out frgrot_gv7vYS -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope8 -out frgrot_V13Eci -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope9 -out frgrot_IRCj6V -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_MIFgfG -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1006/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t bg_image  /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1001/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/example_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1002/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/example_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/example_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/example_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1006/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/example_func
+
+/usr/share/fsl/6.0.3/bin/fslmaths bg_image -inm 1000 -Tmean bg_image -odt float
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t mask  /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1001/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/mask /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1002/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/mask /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1006/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/mask
+
+/usr/share/fsl/6.0.3/bin/fslmaths mask -Tmin mask
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t mean_func  /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1001/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/mean_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1002/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/mean_func /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1006/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/mean_func
+
+/usr/share/fsl/6.0.3/bin/fslmaths mean_func -Tmean mean_func
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t cope1  /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1001/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/cope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1002/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/cope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1006/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/cope1.nii.gz
+
+/usr/share/fsl/6.0.3/bin/fslmaths cope1 -mas mask cope1
+
+echo 1.1344592 > design.lcon
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t varcope1  /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1001/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/varcope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1002/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1003/L1_task-sharedreward_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/varcope1.nii.gz /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1006/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/varcope1.nii.gz
+
+/usr/share/fsl/6.0.3/bin/fslmaths varcope1 -mas mask varcope1
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t tdof_t1  /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1001/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/tdof_t1 /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1004/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/tdof_t1 /data/projects/istart-analyses/derivatives/fsl_task-sharedreward/sub-1006/L2_task-sharedreward_model-01_type-act_sm-6_variant-dctAROMAnonaggr.gfeat/cope1.feat/stats/tdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths tdof_t1 -mas mask tdof_t1

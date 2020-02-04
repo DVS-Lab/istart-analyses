@@ -1,0 +1,21 @@
+
+/bin/cp /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_seed-0_run-01_variant-dctAROMAnonaggr.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -init
+24679
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 95 -l logs -N feat2_pre -j 24679  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -prestats
+26799
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 121 -l logs -N feat3_film -j 26799  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -I 1 -stats
+33390
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 119 -l logs -N feat4_post -j 33390  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -poststats 0 
+12895
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 26799,33390,12895  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat -stop
+15230

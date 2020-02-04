@@ -1,0 +1,528 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Mon Jan 20 16:47:18 EST 2020<p>
+Feat main script<br><pre>
+
+/bin/cp /tmp/feat_g1irSm.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat -gfeatprep
+44548
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -I 1 -flame1
+8612
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 8612 -t ./.flame
+8870
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 8870  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -flame3
+8937
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 8937  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -poststats 1
+9015
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 9015  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope1.feat -stop
+10178
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -I 2 -flame1
+10369
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 10369 -t ./.flame
+10662
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 10662  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -flame3
+10747
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 10747  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -poststats 1
+10878
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 10878  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope2.feat -stop
+11752
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -I 3 -flame1
+11947
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 11947 -t ./.flame
+12203
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 12203  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -flame3
+12288
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 12288  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -poststats 1
+12377
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 12377  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope3.feat -stop
+13512
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 44548  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -I 4 -flame1
+13755
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 13755 -t ./.flame
+14066
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 14066  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -flame3
+14175
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat4_post -j 14175  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -poststats 1
+14269
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 14269  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat -stop
+15172
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 10178,11752,13512,15172  /usr/share/fsl/6.0.3/bin/feat /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat/cope4.feat/design.fsf -D /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/higher_lv_out_01202020.gfeat -stop
+</pre><hr>Higher-level input files preparation<br><pre>
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_m7f4OS -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_vdJ2vA -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_TzaHKz -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_1eFDW6 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_74dN6A -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_BSZ2Ue -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_ibf50G -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_DHQRJb -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_oWZYpH -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_QZq3Tj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_jVbyY8 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_MSuFP7 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_7nN70H -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_WOfBRF -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_70gocf -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_CDFfHF -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_0CO0Th -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_euioLJ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_ozNIVj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_0HC5XG -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_TGNTEf -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_GVJSB3 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_C8m8WW -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_4njGsI -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_rW6krF -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_zKX9rb -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_yJhJ8N -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_tvtXSc -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_95bGFN -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_wmEiMh -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_70eSFO -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_rdgA6g -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_8Zinw3 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_eOGOVY -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_JnG4gP -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_BGO6OJ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_ikWpDc -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_hrUE6N -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_GzyfAj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_rEsfaS -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_cGy3zl -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_DjxgHU -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_GJ1LNh -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_wmh4Ld -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_pPG9G6 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_hDPv0I -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_2FZoyG -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_kFXsmg -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_wCxDhI -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_bH4Usm -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_2DGxNL -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_GeP77l -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_S4dBkN -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_1x0f9m -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_hLGOFe -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_BFuRw9 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_ndFCwO -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_inrm0Q -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_JGDrKr -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_98Qy0Y -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_rOW5Ww -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_GMuH9U -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_0PAY3y -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_Wkfjr1 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_ow6lcC -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_iNtKbm -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_wRcaxl -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_A4DgA0 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_PT8zt0 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_Sr3OzA -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_ATWlw5 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_Y13LZB -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_zLlEX3 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_21jYbG -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_x6Xrp8 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_8yOx7F -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_0OjlAq -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/featregapply /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in example_func -out frgrot_83svXh -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mean_func -out frgrot_jyrdl6 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_Sr5gu5 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope2 -out frgrot_fNfzAw -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope3 -out frgrot_hqbVv6 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/cope4 -out frgrot_dbXtKC -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_pmCuc9 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope2 -out frgrot_kuhJiB -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope3 -out frgrot_m8S5Lf -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in stats/varcope4 -out frgrot_VHaAkH -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/share/fsl/6.0.3/bin/flirt -ref reg/standard -in mask -out frgrot_xsqoro -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg/standard bg_image
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t mask  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask
+
+mkdir -p inputreg
+
+/usr/share/fsl/6.0.3/bin/fslmaths ../mask -mul 8 -Tmean masksum -odt short
+
+/usr/share/fsl/6.0.3/bin/fslmaths masksum -thr 8 -add masksum masksum
+
+/usr/share/fsl/6.0.3/bin/overlay 0 0 -c ../bg_image -a masksum 0.9 16 masksum_overlay
+
+/usr/share/fsl/6.0.3/bin/slicer masksum_overlay -S 2 750 masksum_overlay.png
+
+/usr/share/fsl/6.0.3/bin/fslmaths masksum -mul 0 maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 1 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 2 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 3 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 4 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 5 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 6 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 7 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mask -mul -1 -add 1 -mul 8 -add maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/fslmaths masksum -thr 7 -uthr 7 -bin -mul maskunique maskunique
+
+/usr/share/fsl/6.0.3/bin/overlay 0 0 ../bg_image -a maskunique 0.9 8 maskunique_overlay
+
+/usr/share/fsl/6.0.3/bin/slicer maskunique_overlay -S 2 750 maskunique_overlay.png
+
+/bin/cp /usr/share/fsl/6.0.3/etc/luts/ramp.gif .ramp.gif
+
+/usr/share/fsl/6.0.3/bin/fslmaths mask -Tmin mask
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t mean_func  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/mean_func
+
+/usr/share/fsl/6.0.3/bin/fslmaths mean_func -Tmean mean_func
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t cope1  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1
+
+/usr/share/fsl/6.0.3/bin/fslmaths cope1 -mas mask cope1
+
+printf '0.2295392 ' >> design.lcon
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t varcope1  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope1
+
+/usr/share/fsl/6.0.3/bin/fslmaths varcope1 -mas mask varcope1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 243   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 244   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 250   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 249   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 241   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 230   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 258   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope1 -mul 0 -add 247   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t tdof_t1  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmaths tdof_t1 -mas mask tdof_t1
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t cope2  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2
+
+/usr/share/fsl/6.0.3/bin/fslmaths cope2 -mas mask cope2
+
+printf '0.2368659375 ' >> design.lcon
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t varcope2  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope2
+
+/usr/share/fsl/6.0.3/bin/fslmaths varcope2 -mas mask varcope2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 243   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 244   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 250   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 249   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 241   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 230   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 258   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope2 -mul 0 -add 247   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t tdof_t2  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmaths tdof_t2 -mas mask tdof_t2
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t cope3  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3
+
+/usr/share/fsl/6.0.3/bin/fslmaths cope3 -mas mask cope3
+
+printf '0.6992861875 ' >> design.lcon
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t varcope3  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope3
+
+/usr/share/fsl/6.0.3/bin/fslmaths varcope3 -mas mask varcope3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 243   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 244   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 250   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 249   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 241   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 230   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 258   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope3 -mul 0 -add 247   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t tdof_t3  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmaths tdof_t3 -mas mask tdof_t3
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t cope4  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4
+
+/usr/share/fsl/6.0.3/bin/fslmaths cope4 -mas mask cope4
+
+printf '0.3066553375 ' >> design.lcon
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t varcope4  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/varcope4
+
+/usr/share/fsl/6.0.3/bin/fslmaths varcope4 -mas mask varcope4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 243   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 244   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 250   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 249   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 241   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 230   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 258   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/cope4 -mul 0 -add 247   /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmerge -t tdof_t4  /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1001/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1002/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1003/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srDoors_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4 /data/projects/istart-analyses/derivatives/fsl_srSocialDoors/sub-1004/L1_task-srSocial_model-01_type-act_run-01_sm-6_variant-dctAROMAnonaggr.feat/reg_standard/stats/FEtdof_t4
+
+/usr/share/fsl/6.0.3/bin/fslmaths tdof_t4 -mas mask tdof_t4
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

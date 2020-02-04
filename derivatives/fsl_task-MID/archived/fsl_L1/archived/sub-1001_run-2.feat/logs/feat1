@@ -1,0 +1,21 @@
+
+/bin/cp /tmp/feat_fKqEho.fsf design.fsf
+
+/usr/share/fsl/5.0/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/5.0/doc/fsl.css .files;cp -r /usr/share/fsl/5.0/doc/images .files/images
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat/design.fsf -D /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat -I 1 -init
+31823
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 239 -l logs -N feat2_pre -j 31823  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat/design.fsf -D /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat -I 1 -prestats
+33085
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 107 -l logs -N feat3_film -j 33085  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat/design.fsf -D /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat -I 1 -stats
+4493
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 119 -l logs -N feat4_post -j 4493  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat/design.fsf -D /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat -poststats 0 
+34376
+
+/usr/share/fsl/5.0/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 33085,4493,34376  /usr/share/fsl/5.0/bin/feat /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat/design.fsf -D /data/projects/iStart-practice/fslTest_iris/MID/fsl/sub-1001_run-2.feat -stop
+38265
