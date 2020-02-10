@@ -1,0 +1,3 @@
+[submodule "istart-analyses"]
+	path = istart-analyses
+	url = https://CalebRHaynes@github.com/DVS-Lab/istart-analyses.git
